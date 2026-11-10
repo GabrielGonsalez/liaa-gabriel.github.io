@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="A evolução de um projeto acadêmico sobre UML e geração de código com inteligência artificial, culminando no planejamento de replicação do StructGen.">
+  <title>UML + IA — da modelagem à geração de código</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Ir para o início">
+        <span class="brand-mark" aria-hidden="true">{ }</span>
+        <span>UML <i>+</i> IA</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+        <span></span><span></span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+        <a href="#trajetoria">Trajetória</a>
+        <a href="#structgen">StructGen</a>
+        <a href="#experimento">Experimento</a>
+        <a href="#progresso">Progresso</a>
+        <a class="nav-cta" href="#referencias">Referências <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero section" id="inicio">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="eyebrow"><span class="pulse"></span> PROJETO ACADÊMICO · PESQUISA EM ANDAMENTO</div>
+        <h1>Da <span class="gradient-text">modelagem UML</span><br>à geração de código com IA.</h1>
+        <p class="hero-lead">Uma investigação sobre como modelos UML podem apoiar o desenvolvimento assistido por grandes modelos de linguagem — e como avaliar essa contribuição na prática.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#trajetoria">Conheça a trajetória <span aria-hidden="true">↓</span></a>
+          <a class="button button-ghost" href="#structgen">Estudo escolhido <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="hero-flow" aria-label="Fluxo conceitual do projeto: requisitos, UML e código">
+          <div class="flow-node"><span class="flow-icon">⌘</span><span><small>ENTRADA</small><strong>Requisitos</strong></span></div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-node flow-node-accent"><span class="flow-icon">◇</span><span><small>ESTRUTURA</small><strong>Diagrama UML</strong></span></div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-node"><span class="flow-icon">&lt;/&gt;</span><span><small>SAÍDA</small><strong>Código</strong></span></div>
+        </div>
+      </div>
+      <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+    </section>
+
+    <section class="quick-facts" aria-label="Resumo do projeto">
+      <div class="container facts-grid">
+        <div class="fact"><strong>03</strong><span>etapas principais<br>da investigação</span></div>
+        <div class="fact"><strong>04</strong><span>questões de pesquisa<br>sobre a UML</span></div>
+        <div class="fact"><strong>01</strong><span>artigo selecionado<br>para replicação</span></div>
+        <div class="fact"><strong>Pass@1</strong><span>métrica central<br>do estudo escolhido</span></div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="trajetoria">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">01 / A EVOLUÇÃO DA IDEIA</span>
+          <h2>Uma proposta inicial que<br><span class="text-accent">amadureceu com a pesquisa.</span></h2>
+          <p>O foco do trabalho mudou conforme as questões foram aprofundadas. A trajetória passou de uma ideia de ferramenta para uma investigação sobre o papel da UML no desenvolvimento com IA.</p>
+        </div>
+
+        <div class="journey-grid">
+          <article class="journey-card reveal">
+            <div class="card-topline"><span class="step-number">01</span><span class="step-label">PROPOSTA INICIAL</span></div>
+            <div class="journey-icon icon-blue">✳</div>
+            <h3>Gerar diagramas UML com IA</h3>
+            <p>A ideia inicial era criar uma ferramenta que recebesse uma descrição em linguagem natural e gerasse o código textual de um diagrama UML, utilizando uma LLM.</p>
+            <ul class="compact-list">
+              <li>Entrada: descrição do sistema e tipo de diagrama.</li>
+              <li>Saída: código PlantUML para edição e validação.</li>
+              <li>Avaliação: validade sintática, correção semântica e esforço.</li>
+            </ul>
+            <div class="card-foot">Atividade 3 · Especificação e plano experimental</div>
+          </article>
+
+          <article class="journey-card journey-card-featured reveal">
+            <div class="card-topline"><span class="step-number">02</span><span class="step-label">REFLEXÃO E PESQUISA</span></div>
+            <div class="journey-icon icon-violet">?</div>
+            <h3>A UML ainda é necessária?</h3>
+            <p>Os questionamentos levantados durante as discussões levaram a uma investigação sobre a utilidade da modelagem diante do avanço das ferramentas de IA generativa.</p>
+            <ul class="compact-list">
+              <li>Complexidade e criticidade dos sistemas.</li>
+              <li>Ambiguidade, consistência e rastreabilidade.</li>
+              <li>Limites da interpretação e geração automática.</li>
+            </ul>
+            <div class="card-foot">Atividade 5 · Questões de pesquisa</div>
+          </article>
+
+          <article class="journey-card reveal">
+            <div class="card-topline"><span class="step-number">03</span><span class="step-label">DIRECIONAMENTO ATUAL</span></div>
+            <div class="journey-icon icon-teal">⌁</div>
+            <h3>Replicar o StructGen</h3>
+            <p>O projeto passou a investigar experimentalmente se diagramas UML de atividades podem orientar LLMs e contribuir para a geração de código em nível de função.</p>
+            <ul class="compact-list">
+              <li>Comparação entre geração direta e geração orientada por UML.</li>
+              <li>Estudo de um framework com papéis Designer e Coder.</li>
+              <li>Avaliação baseada em execução de testes (Pass@1).</li>
+            </ul>
+            <div class="card-foot">Atividade 11 · Seleção do estudo para replicação</div>
+          </article>
+        </div>
+
+        <div class="turning-point reveal">
+          <span class="turning-icon" aria-hidden="true">↳</span>
+          <p><strong>A principal mudança de perspectiva:</strong> em vez de perguntar apenas como automatizar a criação de diagramas, o projeto passou a investigar como a UML pode servir de estrutura intermediária para melhorar a geração de código por IA.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="questao">
+      <div class="container question-layout">
+        <div class="question-intro reveal">
+          <span class="section-kicker">02 / O QUESTIONAMENTO CENTRAL</span>
+          <h2>A IA torna a UML<br><span class="gradient-text">dispensável?</span></h2>
+          <p>A pesquisa bibliográfica desenvolvida no semestre indicou que a questão não é simplesmente escolher entre UML ou IA. O papel da modelagem depende das características e da complexidade do sistema.</p>
+          <div class="answer-note"><span class="answer-mark">!</span><span>A UML pode atuar como apoio à comunicação, à validação e à rastreabilidade entre requisitos, arquitetura e implementação.</span></div>
+        </div>
+        <div class="research-questions reveal">
+          <div class="rq-heading"><span>QUESTÕES DE PESQUISA</span><span>QP 01 — 04</span></div>
+          <article class="rq-item"><span>QP1</span><p>Para sistemas de baixa complexidade, a modelagem UML ainda apresenta benefícios quando ferramentas de IA generativa são utilizadas?</p><span class="rq-plus">↗</span></article>
+          <article class="rq-item"><span>QP2</span><p>Quais características de um sistema aumentam a necessidade de modelagem antes ou durante o desenvolvimento assistido por IA?</p><span class="rq-plus">↗</span></article>
+          <article class="rq-item"><span>QP3</span><p>Como a complexidade de sistemas influencia a utilidade da modelagem UML no desenvolvimento assistido por IA?</p><span class="rq-plus">↗</span></article>
+          <article class="rq-item"><span>QP4</span><p>Quais limitações das ferramentas de IA podem tornar a modelagem UML relevante em sistemas complexos?</p><span class="rq-plus">↗</span></article>
+        </div>
+      </div>
+      <div class="container insight-grid reveal">
+        <div class="insight-card"><span class="insight-symbol">◎</span><strong>Menos ambiguidade</strong><p>Modelos estruturados ajudam a explicitar elementos, relações e restrições.</p></div>
+        <div class="insight-card"><span class="insight-symbol">⌘</span><strong>Mais rastreabilidade</strong><p>A UML pode conectar requisitos, decisões arquiteturais e implementação.</p></div>
+        <div class="insight-card"><span class="insight-symbol">◈</span><strong>Validação humana</strong><p>A geração automática ainda exige revisão de omissões e inconsistências.</p></div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="selecao">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">03 / ESCOLHA DO ARTIGO</span>
+          <h2>Da revisão de trabalhos<br>à <span class="text-accent">seleção do estudo.</span></h2>
+          <p>Três estudos foram comparados considerando código-fonte, dados, resultados, detalhamento metodológico, ferramentas e obstáculos para reprodução.</p>
+        </div>
+        <div class="comparison-panel reveal">
+          <div class="comparison-header"><div><span class="section-kicker">AVALIAÇÃO CONSOLIDADA</span><h3>Replicabilidade dos estudos</h3></div><span class="scale-label">Escala normalizada · 0–100%</span></div>
+          <div class="score-row">
+            <div class="score-meta"><span>Calamo et al. — UML Class Diagrams</span><strong>88,0%</strong></div>
+            <div class="score-track"><span class="score-fill score-one" style="--score:88%"></span></div>
+          </div>
+          <div class="score-row score-selected">
+            <div class="score-meta"><span>Wan et al. — StructGen <em>· selecionado</em></span><strong>83,3%</strong></div>
+            <div class="score-track"><span class="score-fill score-two" style="--score:83.3%"></span></div>
+          </div>
+          <div class="score-row">
+            <div class="score-meta"><span>Li et al. — RealBench</span><strong>55,3%</strong></div>
+            <div class="score-track"><span class="score-fill score-three" style="--score:55.3%"></span></div>
+          </div>
+          <p class="score-footnote">As notas foram calculadas pela média de três avaliações (Gemini, ChatGPT e DeepSeek), em escala de 0 a 5, e normalizadas para percentual.</p>
+        </div>
+
+        <div class="selection-explanation reveal">
+          <div class="selection-badge"><span>ESTUDO ESCOLHIDO</span><strong>StructGen</strong></div>
+          <div>
+            <h3>Por que o StructGen?</h3>
+            <p>Embora o estudo de Calamo et al. tenha obtido a maior nota de replicabilidade, o StructGen apresenta maior aderência ao direcionamento atual do projeto: avaliar o uso de diagramas UML como orientação para a geração de código por LLMs. Além disso, a análise identificou código público, benchmarks conhecidos e descrição detalhada da arquitetura e dos experimentos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section structgen-section" id="structgen">
+      <div class="container">
+        <div class="section-heading section-heading-dark reveal">
+          <span class="section-kicker">04 / ESTUDO-ALVO</span>
+          <h2>StructGen: código guiado<br><span class="gradient-text">por diagramas de atividades.</span></h2>
+          <p>O framework proposto por Wan et al. utiliza diagramas UML de atividades como orientação estrutural para a geração de código em nível de função.</p>
+        </div>
+
+        <div class="paper-card reveal">
+          <div class="paper-info">
+            <span class="paper-tag">ARTIGO SELECIONADO</span>
+            <h3>Structure-guided function-level code generation with LLMs via UML activity diagrams</h3>
+            <p>Bangrui Wan, Zheng Wei, Shiyu Wang, Jiangping Huang e Chunqiang Hu · <em>Neurocomputing</em></p>
+            <div class="paper-links">
+              <a href="https://doi.org/10.1016/j.neucom.2025.132502" target="_blank" rel="noopener noreferrer">Acessar o artigo <span>↗</span></a>
+              <a href="https://github.com/SEDevSys/StructGen" target="_blank" rel="noopener noreferrer">Código-fonte no GitHub <span>↗</span></a>
+            </div>
+          </div>
+          <div class="paper-stamp" aria-hidden="true"><span>UML</span><strong>→</strong><span>CODE</span></div>
+        </div>
+
+        <div class="architecture-title reveal"><span>VISÃO GERAL DA ABORDAGEM</span><p>Dois papéis baseados em LLM colaboram em um processo iterativo.</p></div>
+        <div class="architecture reveal">
+          <article class="architecture-card designer-card">
+            <div class="architecture-card-head"><span class="role-icon">◇</span><span>FASE 01</span></div>
+            <h3>Designer</h3>
+            <p>Interpreta os requisitos e modela a solução por meio de um diagrama UML de atividades.</p>
+            <div class="mini-diagram" aria-label="Representação simplificada de um fluxo UML de atividades">
+              <span class="mini-start"></span><i></i><span class="mini-action">Ação</span><i></i><span class="mini-decision">◇</span><i></i><span class="mini-action mini-action-small">Ação</span><i></i><span class="mini-end"></span>
+            </div>
+            <div class="architecture-tags"><span>Sequência</span><span>Seleção</span><span>Iteração</span></div>
+          </article>
+          <div class="architecture-connector"><span>DIAGRAMA UML</span><b>→</b></div>
+          <article class="architecture-card coder-card">
+            <div class="architecture-card-head"><span class="role-icon">&lt;/&gt;</span><span>FASE 02</span></div>
+            <h3>Coder</h3>
+            <p>Gera o código guiado pelo esquema de projeto e utiliza o feedback dos testes para reparar a implementação.</p>
+            <div class="code-preview"><span class="code-line"><i>01</i> def solve(input):</span><span class="code-line"><i>02</i> &nbsp; # lógica guiada pelo modelo</span><span class="code-line"><i>03</i> &nbsp; return result</span><span class="code-cursor"></span></div>
+            <div class="architecture-tags"><span>Geração</span><span>Testes</span><span>Reparo</span></div>
+          </article>
+        </div>
+        <div class="feedback-loop reveal"><span>↺</span><p><strong>Ciclo iterativo:</strong> o Designer pode revisar o esquema de projeto e o Coder pode reparar o código com base no feedback dos testes.</p></div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="experimento">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">05 / PLANO EXPERIMENTAL</span>
+          <h2>Como a replicação<br>será <span class="text-accent">conduzida.</span></h2>
+          <p>O objetivo é reproduzir os aspectos centrais do experimento e observar a contribuição da orientação por UML, documentando diferenças em relação ao estudo original.</p>
+        </div>
+        <div class="experiment-grid">
+          <article class="experiment-card reveal"><span class="experiment-index">A</span><h3>Baseline</h3><p>Gerar código diretamente a partir dos requisitos em linguagem natural, sem utilizar um diagrama UML como orientação intermediária.</p><span class="experiment-label">GERAÇÃO DIRETA</span></article>
+          <article class="experiment-card experiment-card-highlight reveal"><span class="experiment-index">B</span><h3>StructGen</h3><p>Aplicar o fluxo Designer → diagrama de atividades → Coder, incluindo o ciclo de revisão do projeto e reparo do código com feedback dos testes.</p><span class="experiment-label">GERAÇÃO ORIENTADA POR UML</span></article>
+        </div>
+
+        <div class="method-details reveal">
+          <div class="method-block"><span class="method-icon">▦</span><div><h3>Benchmarks citados na análise</h3><p>HumanEval, MBPP e HumanEval-X.</p></div></div>
+          <div class="method-block"><span class="method-icon">✓</span><div><h3>Métrica principal</h3><p><strong>Pass@1:</strong> verifica se a solução gerada passa nos testes considerados na avaliação.</p></div></div>
+          <div class="method-block"><span class="method-icon">⚙</span><div><h3>Ambiente e ferramentas</h3><p>O estudo descreve Python 3.10, APIs de LLM e testes automatizados, além de representações UML em PlantUML, Mermaid e Graphviz.</p></div></div>
+          <div class="method-block"><span class="method-icon">AI</span><div><h3>Modelos citados no estudo</h3><p>GPT-3.5-Turbo na configuração principal, com comparações envolvendo modelos como CodeLlama, DeepSeek-Coder, Qwen2.5-Coder, Mistral, Gemma 2 e GPT-4-Turbo.</p></div></div>
+        </div>
+
+        <div class="caution-box reveal"><span class="caution-symbol">!</span><div><strong>Pontos de atenção para a reprodução</strong><p>A análise prévia identificou dependência de APIs e versões específicas de modelos, necessidade de reproduzir a geração de casos de teste e de conferir a configuração do ambiente experimental. Esses pontos deverão ser registrados durante a replicação.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section progress-section" id="progresso">
+      <div class="container">
+        <div class="section-heading section-heading-dark reveal">
+          <span class="section-kicker">06 / ACOMPANHAMENTO</span>
+          <h2>O que já foi construído<br>e <span class="gradient-text">o que vem a seguir.</span></h2>
+          <p>Este espaço deve ser atualizado conforme a execução avançar. Até o momento, a seleção do artigo e o planejamento da replicação foram definidos; os experimentos ainda não estão apresentados como concluídos.</p>
+        </div>
+        <div class="progress-track reveal">
+          <div class="progress-item is-done"><span class="progress-dot">✓</span><div><small>ETAPA 01</small><h3>Definição da proposta inicial</h3><p>Especificação do problema, dados, arquitetura e plano experimental para geração de PlantUML.</p><span class="status status-done">Concluída</span></div></div>
+          <div class="progress-item is-done"><span class="progress-dot">✓</span><div><small>ETAPA 02</small><h3>Investigação sobre a relevância da UML</h3><p>Formulação de quatro questões de pesquisa e síntese dos argumentos sobre complexidade, rastreabilidade e limitações da IA.</p><span class="status status-done">Concluída</span></div></div>
+          <div class="progress-item is-done"><span class="progress-dot">✓</span><div><small>ETAPA 03</small><h3>Comparação e escolha do artigo</h3><p>Análise de replicabilidade dos estudos e seleção do StructGen como objeto da investigação experimental.</p><span class="status status-done">Concluída</span></div></div>
+          <div class="progress-item is-current"><span class="progress-dot">04</span><div><small>ETAPA ATUAL</small><h3>Preparação da replicação</h3><p>Inspecionar o repositório, compreender dependências, configurar ambiente e mapear os procedimentos do artigo.</p><span class="status status-current">Em planejamento</span></div></div>
+          <div class="progress-item is-next"><span class="progress-dot">05</span><div><small>PRÓXIMA ETAPA</small><h3>Execução e análise dos experimentos</h3><p>Executar os cenários selecionados, registrar resultados e comparar a geração direta com a abordagem orientada por UML.</p><span class="status status-next">A realizar</span></div></div>
+          <div class="progress-item is-next"><span class="progress-dot">06</span><div><small>ETAPA FINAL</small><h3>Discussão e documentação</h3><p>Consolidar resultados, limitações, diferenças em relação ao artigo original e conclusões da replicação.</p><span class="status status-next">A realizar</span></div></div>
+        </div>
+        <div class="update-prompt reveal"><div><span class="update-eyebrow">DICA PARA AS PRÓXIMAS ENTREGAS</span><h3>Registre cada avanço.</h3><p>Adicione uma data, o que foi feito, dificuldades encontradas e evidências (prints, tabelas, commits ou resultados). Assim, esta página também servirá de roteiro para a apresentação final.</p></div><span class="update-icon">＋</span></div>
+      </div>
+    </section>
+
+    <section class="section references-section" id="referencias">
+      <div class="container references-layout">
+        <div class="references-intro reveal">
+          <span class="section-kicker">07 / FONTES E MATERIAIS</span>
+          <h2>Referências para<br>acompanhar o projeto.</h2>
+          <p>Os documentos das entregas anteriores fundamentam a trajetória apresentada. O artigo e o repositório abaixo são as fontes centrais para a etapa de replicação.</p>
+        </div>
+        <div class="references-list reveal">
+          <div class="reference-item"><span class="reference-type">ENTREGA ACADÊMICA</span><div><strong>Especificação e plano experimental do projeto de IA</strong><small>Proposta inicial de geração de diagramas UML a partir de linguagem natural.</small></div><span class="reference-number">01</span></div>
+          <div class="reference-item"><span class="reference-type">ENTREGA ACADÊMICA</span><div><strong>A UML ainda é necessária?</strong><small>Questões de pesquisa e síntese sobre a utilidade da modelagem no desenvolvimento assistido por IA.</small></div><span class="reference-number">02</span></div>
+          <div class="reference-item"><span class="reference-type">ENTREGA ACADÊMICA</span><div><strong>Comparação de replicabilidade dos estudos</strong><small>Critérios, notas e justificativa para a seleção do StructGen.</small></div><span class="reference-number">03</span></div>
+          <a class="reference-item reference-link" href="https://doi.org/10.1016/j.neucom.2025.132502" target="_blank" rel="noopener noreferrer"><span class="reference-type">ARTIGO CIENTÍFICO</span><div><strong>Wan et al. — StructGen</strong><small>Structure-guided function-level code generation with LLMs via UML activity diagrams.</small></div><span class="reference-arrow">↗</span></a>
+          <a class="reference-item reference-link" href="https://github.com/SEDevSys/StructGen" target="_blank" rel="noopener noreferrer"><span class="reference-type">REPOSITÓRIO</span><div><strong>SEDevSys / StructGen</strong><small>Código-fonte público utilizado como ponto de partida para a replicação.</small></div><span class="reference-arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><a class="brand" href="#inicio"><span class="brand-mark">{ }</span><span>UML <i>+</i> IA</span></a><p>Projeto acadêmico · Pesquisa sobre modelagem UML e geração de código com IA</p><a href="#inicio" class="back-top">Voltar ao topo ↑</a></div>
+  </footer>
+</body>
+</html>
