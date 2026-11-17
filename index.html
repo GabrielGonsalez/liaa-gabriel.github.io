@@ -24,10 +24,11 @@
       </button>
       <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
         <a href="#trajetoria">Trajetória</a>
-        <a href="#structgen">StructGen</a>
-        <a href="#experimento">Experimento</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#fluxograma">Método</a>
+        <a href="#laboratorio">Simulador</a>
+        <a href="#replicacao">Replicação</a>
         <a href="#progresso">Progresso</a>
-        <a class="nav-cta" href="#referencias">Referências <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
@@ -168,6 +169,98 @@
           <p class="score-footnote">As notas foram calculadas pela média de três avaliações (Gemini, ChatGPT e DeepSeek), em escala de 0 a 5, e normalizadas para percentual.</p>
         </div>
 
+        <section class="evaluation-detail reveal" id="avaliacoes" aria-labelledby="evaluation-title">
+          <div class="evaluation-heading">
+            <div>
+              <span class="section-kicker">TRANSPARÊNCIA DAS NOTAS</span>
+              <h3 id="evaluation-title">Como cada modelo avaliou os artigos</h3>
+              <p>As notas abaixo foram transcritas da tabela consolidada da Atividade 11. Cada coluna representa uma avaliação feita por um modelo.</p>
+            </div>
+            <span class="evaluation-scale">Escala original: 0 a 5</span>
+          </div>
+          <div class="table-scroll" role="region" aria-label="Tabela das notas por modelo avaliador" tabindex="0">
+            <table class="score-table">
+              <thead>
+                <tr>
+                  <th scope="col">Artigo</th>
+                  <th scope="col">Gemini</th>
+                  <th scope="col">ChatGPT</th>
+                  <th scope="col">DeepSeek</th>
+                  <th scope="col">Média</th>
+                  <th scope="col">Normalizada</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Calamo et al. — UML Class Diagrams</th>
+                  <td>4,5</td><td>4,7</td><td>4,0</td><td><strong>4,40</strong></td><td><strong>88,0%</strong></td>
+                </tr>
+                <tr class="selected-score-row">
+                  <th scope="row">Wan et al. — StructGen <span class="table-selected">Selecionado</span></th>
+                  <td>4,0</td><td>4,0</td><td>4,5</td><td><strong>4,17</strong></td><td><strong>83,3%</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Li et al. — RealBench</th>
+                  <td>3,0</td><td>2,8</td><td>2,5</td><td><strong>2,77</strong></td><td><strong>55,3%</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="score-variation-grid" aria-label="Comparação visual das notas por modelo">
+            <article class="variation-card">
+              <div class="variation-title"><strong>Calamo et al.</strong><span>Média 4,40</span></div>
+              <div class="variation-line"><span>Gemini</span><div class="variation-track"><i style="--value:90%"></i></div><b>4,5</b></div>
+              <div class="variation-line"><span>ChatGPT</span><div class="variation-track"><i style="--value:94%"></i></div><b>4,7</b></div>
+              <div class="variation-line"><span>DeepSeek</span><div class="variation-track"><i style="--value:80%"></i></div><b>4,0</b></div>
+            </article>
+            <article class="variation-card variation-card-selected">
+              <div class="variation-title"><strong>Wan et al. — StructGen</strong><span>Média 4,17</span></div>
+              <div class="variation-line"><span>Gemini</span><div class="variation-track"><i style="--value:80%"></i></div><b>4,0</b></div>
+              <div class="variation-line"><span>ChatGPT</span><div class="variation-track"><i style="--value:80%"></i></div><b>4,0</b></div>
+              <div class="variation-line"><span>DeepSeek</span><div class="variation-track"><i style="--value:90%"></i></div><b>4,5</b></div>
+            </article>
+            <article class="variation-card">
+              <div class="variation-title"><strong>Li et al. — RealBench</strong><span>Média 2,77</span></div>
+              <div class="variation-line"><span>Gemini</span><div class="variation-track"><i style="--value:60%"></i></div><b>3,0</b></div>
+              <div class="variation-line"><span>ChatGPT</span><div class="variation-track"><i style="--value:56%"></i></div><b>2,8</b></div>
+              <div class="variation-line"><span>DeepSeek</span><div class="variation-track"><i style="--value:50%"></i></div><b>2,5</b></div>
+            </article>
+          </div>
+
+          <div class="calculation-panel">
+            <div class="calculation-copy">
+              <span class="section-kicker">CÁLCULO DOCUMENTADO</span>
+              <h4>Peso das avaliações e dos critérios</h4>
+              <p>A Atividade 11 informa que a média foi calculada a partir das três avaliações, mas não registra notas separadas nem pesos numéricos para cada critério de replicabilidade. Por isso, não é possível afirmar que os critérios receberam pesos iguais ou diferentes.</p>
+            </div>
+            <div class="formula-card">
+              <span class="formula-label">Ponderação documentada entre os modelos</span>
+              <strong>Gemini ⅓ + ChatGPT ⅓ + DeepSeek ⅓</strong>
+              <code>Média = (Gemini + ChatGPT + DeepSeek) / 3</code>
+              <code>Percentual = (Média / 5) × 100</code>
+            </div>
+          </div>
+          <div class="criteria-explained">
+            <div class="criteria-note">
+              <strong>Dimensões qualitativas consideradas na comparação</strong>
+              <p>Código e artefatos; dados e benchmarks; resultados experimentais; detalhamento metodológico; técnicas, modelos, ferramentas, ambiente e métricas; obstáculos à reprodução.</p>
+              <span class="not-weighted">Peso numérico por dimensão na avaliação original: não informado.</span>
+            </div>
+            <details class="proposed-rubric">
+              <summary>Ver proposta de ponderação para uma reavaliação futura</summary>
+              <p>Uma nova rodada pode usar seis dimensões com pesos iguais (1/6, aproximadamente 16,7% cada). Essa é uma proposta para tornar uma avaliação futura auditável; ela <strong>não foi aplicada</strong> às notas históricas acima e não altera as médias da Atividade 11.</p>
+              <div class="rubric-grid">
+                <span>Código e artefatos</span><b>16⅔%</b>
+                <span>Dados e benchmarks</span><b>16⅔%</b>
+                <span>Resultados e saídas brutas</span><b>16⅔%</b>
+                <span>Metodologia e prompts</span><b>16⅔%</b>
+                <span>Modelos, ferramentas, ambiente e métricas</span><b>16⅔%</b>
+                <span>Obstáculos e dependências</span><b>16⅔%</b>
+              </div>
+            </details>
+          </div>
+        </section>
+
         <div class="selection-explanation reveal">
           <div class="selection-badge"><span>ESTUDO ESCOLHIDO</span><strong>StructGen</strong></div>
           <div>
@@ -220,6 +313,62 @@
           </article>
         </div>
         <div class="feedback-loop reveal"><span>↺</span><p><strong>Ciclo iterativo:</strong> o Designer pode revisar o esquema de projeto e o Coder pode reparar o código com base no feedback dos testes.</p></div>
+
+        <section class="method-flow-section reveal" id="fluxograma" aria-labelledby="flow-title">
+          <div class="method-flow-heading">
+            <span class="section-kicker">MÉTODO DO ARTIGO · FLUXOGRAMA</span>
+            <h3 id="flow-title">Do requisito ao código validado</h3>
+            <p>Visão didática do método descrito por Wan et al. e no repositório: o diagrama orienta a geração, enquanto os testes alimentam o ciclo de revisão e reparo.</p>
+          </div>
+          <div class="method-flow-scroll" role="img" aria-label="Fluxograma do StructGen: requisito entra no Designer, que produz um diagrama UML de atividades; o Coder gera o código; testes verificam a solução; em caso de falha, o Coder repara o código e o Designer pode revisar o diagrama; quando aprovado, o resultado é registrado.">
+            <svg class="method-flow-svg" viewBox="0 0 1100 650" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <marker id="flow-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#91a8c5"/></marker>
+                <marker id="flow-arrow-cyan" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#4dd8d0"/></marker>
+              </defs>
+              <rect x="20" y="18" width="1060" height="612" rx="22" fill="#111e32" stroke="#2a3b54"/>
+              <text x="52" y="58" class="svg-lane-label">ENTRADA E FASE DE DESIGN</text>
+              <rect x="365" y="82" width="370" height="62" rx="12" class="svg-node svg-node-input"/>
+              <text x="550" y="107" text-anchor="middle" class="svg-node-kicker">ENTRADA</text>
+              <text x="550" y="128" text-anchor="middle" class="svg-node-text">Requisito / descrição da função</text>
+              <path d="M550 144 V178" class="svg-connector" marker-end="url(#flow-arrow)"/>
+              <rect x="365" y="184" width="370" height="76" rx="12" class="svg-node svg-node-designer"/>
+              <text x="550" y="211" text-anchor="middle" class="svg-node-kicker">FASE 1 · LLM DESIGNER</text>
+              <text x="550" y="236" text-anchor="middle" class="svg-node-text">Interpreta e organiza a lógica</text>
+              <path d="M550 260 V294" class="svg-connector" marker-end="url(#flow-arrow)"/>
+              <rect x="365" y="300" width="370" height="76" rx="12" class="svg-node svg-node-uml"/>
+              <text x="550" y="327" text-anchor="middle" class="svg-node-kicker">MODELO INTERMEDIÁRIO</text>
+              <text x="550" y="352" text-anchor="middle" class="svg-node-text">Diagrama UML de atividades</text>
+              <text x="550" y="365" text-anchor="middle" class="svg-node-small">sequência · seleção · iteração</text>
+              <path d="M550 376 V410" class="svg-connector" marker-end="url(#flow-arrow)"/>
+              <rect x="365" y="416" width="370" height="76" rx="12" class="svg-node svg-node-coder"/>
+              <text x="550" y="443" text-anchor="middle" class="svg-node-kicker">FASE 2 · LLM CODER</text>
+              <text x="550" y="468" text-anchor="middle" class="svg-node-text">Gera código guiado pelo diagrama</text>
+              <path d="M550 492 V526" class="svg-connector" marker-end="url(#flow-arrow)"/>
+              <rect x="365" y="532" width="370" height="62" rx="12" class="svg-node svg-node-test"/>
+              <text x="550" y="557" text-anchor="middle" class="svg-node-kicker">AVALIAÇÃO</text>
+              <text x="550" y="579" text-anchor="middle" class="svg-node-text">Executar testes e verificar a saída</text>
+
+              <path d="M735 562 H830" class="svg-connector svg-connector-success" marker-end="url(#flow-arrow-cyan)"/>
+              <rect x="838" y="525" width="210" height="76" rx="12" class="svg-node svg-node-success"/>
+              <text x="943" y="553" text-anchor="middle" class="svg-node-kicker">SE APROVADO</text>
+              <text x="943" y="577" text-anchor="middle" class="svg-node-text">Registrar resultado</text>
+              <text x="943" y="590" text-anchor="middle" class="svg-node-small">ex.: Pass@1</text>
+
+              <path d="M365 562 H270" class="svg-connector svg-connector-feedback" marker-end="url(#flow-arrow)"/>
+              <rect x="55" y="515" width="207" height="94" rx="12" class="svg-node svg-node-feedback"/>
+              <text x="158" y="542" text-anchor="middle" class="svg-node-kicker">SE FALHAR</text>
+              <text x="158" y="565" text-anchor="middle" class="svg-node-text">Feedback dos testes</text>
+              <text x="158" y="585" text-anchor="middle" class="svg-node-small">orienta o reparo</text>
+              <path d="M158 515 V454 H354" class="svg-connector svg-connector-feedback" marker-end="url(#flow-arrow)"/>
+              <text x="178" y="442" class="svg-loop-label">Coder repara o código</text>
+              <path d="M158 515 V222 H354" class="svg-connector svg-connector-feedback" stroke-dasharray="6 6" marker-end="url(#flow-arrow)"/>
+              <text x="42" y="206" class="svg-loop-label">Designer revisa o diagrama</text>
+              <text x="55" y="615" class="svg-footnote">Ciclo ilustrativo; os limites de tentativas são definidos na configuração do repositório.</text>
+            </svg>
+          </div>
+          <p class="flow-source-note">Fluxo reconstruído a partir da descrição do artigo, do README, do script de execução e da configuração pública do StructGen. Não representa todos os detalhes internos do algoritmo.</p>
+        </section>
       </div>
     </section>
 
@@ -238,18 +387,95 @@
         <div class="method-details reveal">
           <div class="method-block"><span class="method-icon">▦</span><div><h3>Benchmarks citados na análise</h3><p>HumanEval, MBPP e HumanEval-X.</p></div></div>
           <div class="method-block"><span class="method-icon">✓</span><div><h3>Métrica principal</h3><p><strong>Pass@1:</strong> verifica se a solução gerada passa nos testes considerados na avaliação.</p></div></div>
-          <div class="method-block"><span class="method-icon">⚙</span><div><h3>Ambiente e ferramentas</h3><p>O estudo descreve Python 3.10, APIs de LLM e testes automatizados, além de representações UML em PlantUML, Mermaid e Graphviz.</p></div></div>
-          <div class="method-block"><span class="method-icon">AI</span><div><h3>Modelos citados no estudo</h3><p>GPT-3.5-Turbo na configuração principal, com comparações envolvendo modelos como CodeLlama, DeepSeek-Coder, Qwen2.5-Coder, Mistral, Gemma 2 e GPT-4-Turbo.</p></div></div>
+          <div class="method-block"><span class="method-icon">⚙</span><div><h3>Ambiente e ferramentas</h3><p>Há uma divergência a conferir: a Atividade 11 registra Python 3.10, mas o README do repositório indica Ubuntu 24.04.1 e Python 3.8; o requirements.txt fixa Python 3.8.20.</p></div></div>
+          <div class="method-block"><span class="method-icon">AI</span><div><h3>Modelos: artigo × repositório</h3><p>A análise do artigo registra GPT-3.5-Turbo na configuração principal e comparações com várias LLMs. Já a configuração pública atual usa DeepSeek-Coder-6.7B-Instruct como padrão para Designer e Coder; a lista ativa no script também precisa ser conferida.</p></div></div>
         </div>
 
         <div class="caution-box reveal"><span class="caution-symbol">!</span><div><strong>Pontos de atenção para a reprodução</strong><p>A análise prévia identificou dependência de APIs e versões específicas de modelos, necessidade de reproduzir a geração de casos de teste e de conferir a configuração do ambiente experimental. Esses pontos deverão ser registrados durante a replicação.</p></div></div>
       </div>
     </section>
 
+    <section class="section demo-section" id="laboratorio">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">06 / DEMONSTRAÇÃO INTERATIVA</span>
+          <h2>O que muda quando a UML<br><span class="text-accent">entra antes do código?</span></h2>
+          <p>Edite um requisito e compare dois caminhos conceituais: geração direta e geração precedida pelo Designer, que explicita o fluxo em um diagrama de atividades antes do Coder implementar.</p>
+        </div>
+        <div class="demo-disclaimer reveal"><strong>Simulação didática local.</strong> Esta página não chama uma LLM nem executa o StructGen original. Os exemplos são produzidos por regras JavaScript simplificadas para ilustrar a diferença entre os fluxos; não são resultados experimentais.</div>
+        <div class="demo-editor reveal">
+          <label for="requirement-input">Requisito funcional</label>
+          <textarea id="requirement-input" rows="4" maxlength="800" spellcheck="true">Receba uma lista de números inteiros e retorne o maior número par. Se não houver nenhum número par, retorne None.</textarea>
+          <div class="demo-editor-footer"><span id="requirement-count">0 / 800 caracteres</span><button class="button button-primary" type="button" id="compare-button">Comparar os dois fluxos <span aria-hidden="true">→</span></button></div>
+        </div>
+        <div class="demo-results" id="demo-results" aria-live="polite">
+          <article class="demo-column reveal">
+            <div class="demo-column-header"><span class="demo-step-label">CAMINHO A</span><h3>Geração direta</h3><p>O requisito é enviado diretamente ao gerador de código.</p></div>
+            <div class="demo-mini-flow"><span>Requisito</span><b>→</b><span class="demo-mini-code">LLM Coder</span><b>→</b><span>Código</span></div>
+            <div class="demo-output"><div class="output-header"><span>SAÍDA ILUSTRATIVA</span><button type="button" class="copy-output" data-copy="direct-output">Copiar</button></div><pre><code id="direct-output"></code></pre></div>
+          </article>
+          <article class="demo-column demo-column-uml reveal">
+            <div class="demo-column-header"><span class="demo-step-label">CAMINHO B</span><h3>Designer → UML → Coder</h3><p>O Designer estrutura as etapas e as condições; o Coder recebe esse modelo como orientação.</p></div>
+            <div class="designer-flow-wrap"><div class="designer-flow" id="designer-flow"></div></div>
+            <div class="demo-output"><div class="output-header"><span>CÓDIGO ORIENTADO PELO DIAGRAMA</span><button type="button" class="copy-output" data-copy="guided-output">Copiar</button></div><pre><code id="guided-output"></code></pre></div>
+          </article>
+        </div>
+        <p class="demo-comparison-note" id="demo-explanation">A diferença didática principal é a representação intermediária: o fluxo guiado torna explícitas etapas, decisões e casos de borda antes da implementação.</p>
+      </div>
+    </section>
+
+    <section class="section replication-section" id="replicacao">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">07 / PLANO DE REPLICAÇÃO</span>
+          <h2>O que está disponível,<br><span class="text-accent">o que precisa ser verificado.</span></h2>
+          <p>O repositório oferece uma base concreta para reprodução, mas alguns elementos exigem conferência, reconstrução do ambiente ou decisões de escopo. A tabela separa o que já foi localizado do que ainda precisa ser resolvido.</p>
+        </div>
+        <div class="replication-grid">
+          <article class="replication-card replication-available reveal">
+            <span class="replication-label">LOCALIZADO NAS FONTES PÚBLICAS</span>
+            <h3>Artefatos disponíveis</h3>
+            <ul>
+              <li><strong>Código-fonte:</strong> script principal <code>generate_feedback.py</code> e utilitários em <code>utils.py</code>.</li>
+              <li><strong>Configuração:</strong> <code>generate/config.ini</code> registra dataset, modelos, parâmetros, limites de tentativas e caminhos dos prompts.</li>
+              <li><strong>Prompts:</strong> existem templates <code>generate_plantuml.md</code> e <code>generate_function_code.md</code>; portanto, não é correto dizer que todos os prompts estão ausentes.</li>
+              <li><strong>Dependências:</strong> <code>requirements.txt</code> lista versões de pacotes e Python 3.8.20.</li>
+              <li><strong>Saídas:</strong> o README descreve CSVs intermediários, JSONL finais e arquivos de log.</li>
+            </ul>
+          </article>
+          <article class="replication-card replication-check reveal">
+            <span class="replication-label">PENDÊNCIAS DE VERIFICAÇÃO</span>
+            <h3>Informações e dados a conferir</h3>
+            <ul>
+              <li><strong>Dados:</strong> os scripts esperam arquivos em <code>data/humaneval/</code>, <code>data/mbpp/</code> e <code>data/humaneval-x/</code>; é necessário obter e versionar os benchmarks usados.</li>
+              <li><strong>Resultados originais:</strong> o repositório descreve formatos de saída, mas ainda é preciso confirmar a disponibilidade de todas as saídas brutas usadas nas tabelas do artigo.</li>
+              <li><strong>Prompts:</strong> os templates do repositório estão disponíveis; falta conferir se correspondem exatamente à versão usada em cada experimento publicado.</li>
+              <li><strong>Ambiente:</strong> a Atividade 11 registrou Python 3.10, enquanto o README e <code>requirements.txt</code> do repositório indicam Python 3.8/3.8.20. A divergência precisa ser resolvida antes da execução.</li>
+              <li><strong>APIs e versões:</strong> nomes de modelos e endpoints podem não identificar snapshots imutáveis; custos, acesso e comportamento podem mudar.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="planned-changes reveal">
+          <div>
+            <span class="section-kicker">ADAPTAÇÕES PLANEJADAS</span>
+            <h3>O que será diferente na minha replicação?</h3>
+            <p>A reprodução será focada nos elementos centrais do método, mas o escopo será reduzido para caber nos recursos e no tempo disponíveis. As diferenças serão registradas e consideradas na interpretação dos resultados.</p>
+          </div>
+          <div class="change-list">
+            <div><b>01</b><span><strong>Menos modelos</strong><small>O artigo compara mais combinações de LLMs. A replicação utilizará um conjunto menor, priorizando modelos recentes e acessíveis.</small></span></div>
+            <div><b>02</b><span><strong>Benchmarks selecionados</strong><small>Em vez de reproduzir necessariamente os três conjuntos completos, será definido um recorte viável entre HumanEval, MBPP e HumanEval-X.</small></span></div>
+            <div><b>03</b><span><strong>Comparação controlada</strong><small>Manter os mesmos requisitos e condições sempre que possível, comparando geração direta com geração orientada pelo diagrama de atividades.</small></span></div>
+            <div><b>04</b><span><strong>Registro das diferenças</strong><small>Documentar versões, prompts, parâmetros, tentativas, testes, custos e desvios em relação ao protocolo original.</small></span></div>
+          </div>
+        </div>
+        <div class="replication-warning"><strong>Limite da evidência atual:</strong> os itens marcados como pendência ainda não foram resolvidos por execução experimental. A seção será atualizada conforme os arquivos e o ambiente forem inspecionados.</div>
+      </div>
+    </section>
+
     <section class="section progress-section" id="progresso">
       <div class="container">
         <div class="section-heading section-heading-dark reveal">
-          <span class="section-kicker">06 / ACOMPANHAMENTO</span>
+          <span class="section-kicker">08 / ACOMPANHAMENTO</span>
           <h2>O que já foi construído<br>e <span class="gradient-text">o que vem a seguir.</span></h2>
           <p>Este espaço deve ser atualizado conforme a execução avançar. Até o momento, a seleção do artigo e o planejamento da replicação foram definidos; os experimentos ainda não estão apresentados como concluídos.</p>
         </div>
@@ -278,6 +504,10 @@
           <div class="reference-item"><span class="reference-type">ENTREGA ACADÊMICA</span><div><strong>Comparação de replicabilidade dos estudos</strong><small>Critérios, notas e justificativa para a seleção do StructGen.</small></div><span class="reference-number">03</span></div>
           <a class="reference-item reference-link" href="https://doi.org/10.1016/j.neucom.2025.132502" target="_blank" rel="noopener noreferrer"><span class="reference-type">ARTIGO CIENTÍFICO</span><div><strong>Wan et al. — StructGen</strong><small>Structure-guided function-level code generation with LLMs via UML activity diagrams.</small></div><span class="reference-arrow">↗</span></a>
           <a class="reference-item reference-link" href="https://github.com/SEDevSys/StructGen" target="_blank" rel="noopener noreferrer"><span class="reference-type">REPOSITÓRIO</span><div><strong>SEDevSys / StructGen</strong><small>Código-fonte público utilizado como ponto de partida para a replicação.</small></div><span class="reference-arrow">↗</span></a>
+          <a class="reference-item reference-link" href="https://raw.githubusercontent.com/SEDevSys/StructGen/main/generate/generate_plantuml.md" target="_blank" rel="noopener noreferrer"><span class="reference-type">PROMPT / DESIGNER</span><div><strong>Template para diagrama PlantUML</strong><small>Instruções usadas para estruturar as atividades, decisões e laços do requisito.</small></div><span class="reference-arrow">↗</span></a>
+          <a class="reference-item reference-link" href="https://raw.githubusercontent.com/SEDevSys/StructGen/main/generate/generate_function_code.md" target="_blank" rel="noopener noreferrer"><span class="reference-type">PROMPT / CODER</span><div><strong>Template para geração de código</strong><small>Fornece ao Coder a descrição funcional e o diagrama como lógica de processo.</small></div><span class="reference-arrow">↗</span></a>
+          <a class="reference-item reference-link" href="https://raw.githubusercontent.com/SEDevSys/StructGen/main/generate/config.ini" target="_blank" rel="noopener noreferrer"><span class="reference-type">CONFIGURAÇÃO</span><div><strong>Parâmetros do StructGen</strong><small>Modelos, dataset padrão, tipo de UML e limites de reparo configurados no projeto.</small></div><span class="reference-arrow">↗</span></a>
+          <a class="reference-item reference-link" href="https://raw.githubusercontent.com/SEDevSys/StructGen/main/requirements.txt" target="_blank" rel="noopener noreferrer"><span class="reference-type">DEPENDÊNCIAS</span><div><strong>requirements.txt</strong><small>Versões das dependências e versão do Python declarada pelo repositório.</small></div><span class="reference-arrow">↗</span></a>
         </div>
       </div>
     </section>
